@@ -56,7 +56,7 @@
 		* @desc Currently playing audio file
 		* @type {Object}
 		*/
-		SongPlayer.SongPlayer.currentSong = null;
+		SongPlayer.currentSong = null;
 		
 		/**
 		* @function SongPlayer.play
@@ -70,7 +70,7 @@
 				playSong(song);				
 			} else if (SongPlayer.currentSong === song) {
 				if (currentBuzzObject.isPaused()) {
-					currentBuzzObject.play();
+					playSong(song);
 				}
 			}
 		};
