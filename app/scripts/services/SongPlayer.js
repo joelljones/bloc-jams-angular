@@ -81,6 +81,12 @@
 		SongPlayer.currentTime = null;
 		
 		/**
+		* @desc Volume of currently playing song
+		* @type {Number}
+		*/
+		SongPlayer.volume = null;
+		
+		/**
 		* @function SongPlayer.play
 		* @desc If currently playing audio file is not the same as selected, plays new audio file. If it is, and is paused, it will play
 		* @param {Object} song
@@ -154,6 +160,17 @@
 		SongPlayer.setCurrentTime = function(time) {
 			if (currentBuzzObject) {
 				currentBuzzObject.setTime(time);
+			}
+		};
+		
+		/**
+		* @function setVolume
+		* @desc Set volume of currently playing song on a scale from 0-100
+		* @param {Number} volume
+		*/
+		SongPlayer.setVolume = function(volume) {
+			if (currentBuzzObject) {
+				currentBuzzObject.setVolume(volume);
 			}
 		};
 		
