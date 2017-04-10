@@ -21,7 +21,7 @@
 		*/
 		var setSong = function(song) {
 			if (currentBuzzObject) {
-				stopSong;
+				stopSong();
 				SongPlayer.currentSong.playing = null;
 			}
 
@@ -124,7 +124,7 @@
 			currentSongIndex--;
 			
 			if (currentSongIndex < 0) {
-				stopSong;
+				stopSong();
 				SongPlayer.currentSong.playing = null;
 			} else {
 				var song = currentAlbum.songs[currentSongIndex];
@@ -143,7 +143,7 @@
 			currentSongIndex++;
 			
 			if (currentSongIndex > currentAlbum.songs.length) {
-				stopSong;
+				stopSong();
 				SongPlayer.currentSong.playing = null;
 			} else {
 				var song = currentAlbum.songs[currentSongIndex];
