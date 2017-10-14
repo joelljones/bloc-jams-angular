@@ -1,9 +1,9 @@
 (function() {
-    function CollectionCtrl(Fixtures) {
+  function CollectionCtrl(Fixtures) {
 		this.albums = Fixtures.getCollection(12);
-    }
+  }
 
-    angular
-        .module('blocJams')
-        .controller('CollectionCtrl', ['Fixtures', CollectionCtrl]);
+  angular
+    .module('blocJams')
+    .controller('CollectionCtrl', ['Fixtures', CollectionCtrl]);
 })();

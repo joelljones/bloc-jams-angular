@@ -1,17 +1,19 @@
 <section class="album-covers container clearfix">
-    <div class="collection-album-container column fourth" ng-repeat="album in collection.albums track by $index">
-        <img src="{{ album.albumArtUrl }}">
-        <div class="collection-album-info caption">
-            <p>
-                <a class="album-name" ui-sref="album">{{ album.title }}</a>
-                <br/>
-                <a ui-sref="album">{{ album.artist }}</a>
-                <br/>
-                {{ album.songs.length }} songs
-                <br/>
-            </p>
-        </div>
+  <!-- ngRepeat instantiates a template once per item from a collection. Each template instance gets its own scope, where the given loop variable is set to the current collection item, and $index is set to the item index or key. -->
+  <div class="collection-album-container column fourth" ng-repeat="album in collection.albums track by $index">
+    <img src="{{ album.albumArtUrl }}">
+    <div class="collection-album-info caption">
+      <p>
+        <a class="album-name" ui-sref="album">{{ album.title }}</a>
+        <br/>
+        <a ui-sref="album">{{ album.artist }}</a>
+        <br/>
+        {{ album.songs.length }} songs
+        <br/>
+      </p>
     </div>
+  </div>
 </section>
 
-<ng-include src="'/templates/player_bar.html'"></ng-include>
+<!-- include external template -->
+<ng-include src="'templates/player_bar.html'"></ng-include>
