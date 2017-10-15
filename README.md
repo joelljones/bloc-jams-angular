@@ -2,6 +2,8 @@
 
 A digital music player like [Spotify](https://www.spotify.com).
 
+- HTML, CSS, JavaScript and AngularJS.
+
 | User Story | Difficulty Rating |
 | ---------- | :---------------: |
 | As a developer, I want to bootstrap Angular to my application. | 1 |
